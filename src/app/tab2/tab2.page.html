@@ -1,0 +1,85 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        color="dark"
+        defaultHref="tabs/tab1/{{ nip }}"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="all">
+    <ion-item>
+      <ion-label>Absen</ion-label>
+      <ion-select [(ngModel)]="jenisabsen" placeholder="Pilih alasan">
+        <ion-select-option value="sakit">Sakit</ion-select-option>
+        <ion-select-option value="cuti">Cuti</ion-select-option>
+
+        <ion-select-option value="izin">Izin Tidak Hadir</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <br />
+    <div class="sakit" *ngIf="jenisabsen === 'sakit'">
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Waktu Pengajuan</th>
+            <th>Jumlah Hari</th>
+            <th>Alasan</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let a of sakit; let i=index;">
+          <tr>
+            <td>{{ i+1 }}</td>
+            <td>{{a.waktu_pengajuan}}</td>
+            <td>{{ a.selesai_pengajuan }}</td>
+            <td>{{a.alasan}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sakit" *ngIf="jenisabsen === 'izin'">
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Waktu Pengajuan</th>
+            <th>Jumlah Hari</th>
+            <th>Alasan</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let a of izin; let i=index;">
+          <tr>
+            <td>{{ i+1 }}</td>
+            <td>{{a.waktu_pengajuan}}</td>
+            <td>{{ a.selesai_pengajuan }}</td>
+            <td>{{a.alasan}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sakit" *ngIf="jenisabsen === 'cuti'">
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Waktu Pengajuan</th>
+            <th>Jumlah Hari</th>
+            <th>Alasan</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let a of cuti; let i=index;">
+          <tr>
+            <td>{{ i+1 }}</td>
+            <td>{{a.waktu_pengajuan}}</td>
+            <td>{{ a.selesai_pengajuan }}</td>
+            <td>{{a.alasan}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ion-content>

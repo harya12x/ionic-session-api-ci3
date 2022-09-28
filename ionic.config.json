@@ -1,0 +1,8 @@
+{
+  "name": "aplikasi-kepegawaian",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

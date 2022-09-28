@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col class="ion-align-items-center">
+        <ion-item  lines="none">
+          <ion-label>
+              <img src="../assets/unbin.png" alt="">
+          </ion-label>
+        </ion-item>
+        <ion-label>
+          <h1>Register</h1>
+        </ion-label>
+        <ion-item>
+          <ion-label position="floating">Nama</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nomor Pegawai</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button [routerLink]="['/login']" expand="block">Continue</ion-button>
+        <ion-label>
+          <h2 class="or">Already have an account?</h2>
+        </ion-label>
+        <ion-button fill="outline" [routerLink]="['/login']" expand="block">Log In</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "aplikasi-kepegawaian",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

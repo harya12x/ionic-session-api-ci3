@@ -1,0 +1,76 @@
+<ion-content [fullscreen]="true" color="light">
+  <div class="top"></div>
+  <div class="grid-container">
+    <div class="left"></div>
+    <div class="card">
+      <ion-label>
+        <!-- <h1>{{ hello }},</h1>
+         <h1>{{ nama }} !</h1> -->
+      </ion-label>
+      <ion-input hidden type="number"> {{ nip }}</ion-input>
+
+      <!-- <ion-card *ngIf="greetings">
+        <ion-item>
+          <ion-label>
+            <h4>{{ test }}</h4>
+          </ion-label>
+        </ion-item>
+        <div class="presensi" *ngIf="card">
+          <ion-card button color="primary" (click)="inputpresensi()">
+            <h4>Presensi</h4>
+          </ion-card>
+        </div>
+        <ion-item>
+          <ion-label>
+            <h4>{{test2}}</h4>
+          </ion-label>
+        </ion-item>
+      </ion-card> -->
+
+      <!-- <ion-card>
+        <div class="ketidakhadiran">
+          <ion-item lines="none">
+            <ion-label><h4>Total Pengajuan Ketidakhadiran</h4></ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label><h4>{{ totalketidakhadiran }}</h4></ion-label>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label><h4>Tidak Hadir</h4></ion-label>
+            <ion-label><h4>Sakit</h4></ion-label>
+            <ion-label><h4>Cuti</h4></ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label><h4>{{ izin }}</h4></ion-label>
+            <ion-label><h4>{{ sakit }}</h4></ion-label>
+            <ion-label><h4>{{ cuti }}</h4></ion-label>
+          </ion-item>
+          <ion-button
+            fill="solid"
+            expand="full"
+            shape="round"
+            color="primary"
+            (click)="detailData(nip)"
+          >
+            <h4>Klik Untuk Melihat Detail</h4>
+          </ion-button>
+        </div>
+      </ion-card> -->
+    </div>
+    <div class="right"></div>
+  </div>
+
+  <!-- <div class="abc">
+    <ion-label>
+      <h2>Ada yang Ingin Disampaikan?</h2>
+    </ion-label>
+  </div>
+  <ion-button fill="solid" shape="round" expand="full" color="primary" (click)="sendData()">
+    <h4>Mengajukan Absen</h4>
+  </ion-button> -->
+</ion-content>
+<ion-footer>
+  <ion-button color="danger " fill="solid" expand="full" shape="round" (click)="onClick()">
+    <h4>Log Out</h4>
+  </ion-button>
+</ion-footer>

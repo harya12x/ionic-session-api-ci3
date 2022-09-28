@@ -1,0 +1,58 @@
+<!-- Default back button -->
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        color="dark"
+        defaultHref="tabs/tab1/{{ nip }}"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>
+    <ion-label>
+      <h2>Jenis Absen</h2>
+    </ion-label>
+    <br />
+    <ion-item>
+      <ion-label>Absen</ion-label>
+      <ion-select [(ngModel)]="absen" placeholder="Pilih alasan">
+        <ion-select-option value="sakit">Sakit</ion-select-option>
+        <div class="differenceday" *ngIf="differenceDays > 365">
+          <ion-select-option value="cuti">Cuti</ion-select-option>
+        </div>
+        <ion-select-option value="izin">Izin Tidak Hadir</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="fileupload" *ngIf="absen === 'sakit'">
+      <ion-item>
+        <ion-input
+          [(ngModel)]="images"
+          (change)="loadImageFromDevice($event)"
+          type="file"
+        ></ion-input>
+      </ion-item>
+
+      <ion-label
+        ><h6>Ukuran Maksimal : 2Mb, Format file : PNG, JPG, JPEG</h6></ion-label
+      >
+    </div>
+    <ion-item>
+      <ion-label>Mulai Pengajuan</ion-label>
+      <ion-input [(ngModel)]="waktuMulai" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Selesai Pengajuan</ion-label>
+      <ion-input [(ngModel)]="waktuBeres" type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alasan</ion-label>
+      <ion-input [(ngModel)]="alasan" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="uploadData()" expand="block"> Kirim </ion-button>
+  </h1>
+</ion-content>
